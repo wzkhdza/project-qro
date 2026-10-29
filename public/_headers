@@ -1,0 +1,10 @@
+# Cabeceras para Cloudflare Pages (https://developers.cloudflare.com/pages/configuration/headers/)
+/*
+  X-Robots-Tag: noindex, nofollow
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'
+
+/assets/*
+  Cache-Control: public, max-age=604800

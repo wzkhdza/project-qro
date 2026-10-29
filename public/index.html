@@ -3,37 +3,267 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111411">
-  <meta name="description" content="Taller Norte: concepto ficticio de barbería en Querétaro. Demostración de portafolio, sin reservaciones reales.">
-  <title>Taller Norte | Barbería de autor — Demo</title>
+  <title>Taller Norte · Barbería de autor (demo ficticia)</title>
+  <meta name="description" content="Taller Norte es una barbería ficticia en Querétaro creada como demostración de portafolio. Sin reservaciones, precios ni establecimiento reales.">
+  <!-- Demo de portafolio: no debe aparecer en buscadores como si fuera un negocio real. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f4f0e6">
+
+  <!-- Vista previa al compartir el enlace (WhatsApp, Facebook, etc.).
+       Tras publicar, cambia og:image por la URL absoluta: https://TU-PROYECTO.pages.dev/assets/og-image.png -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Taller Norte · Demo de sitio para barbería">
+  <meta property="og:description" content="Concepto ficticio de portafolio: sitio de una página con servicios, ubicación y simulación de contacto por WhatsApp.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Taller Norte, demostración ficticia de barbería">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Icono de marca reutilizable (dibujado en SVG para que se vea igual en todos los dispositivos) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-mark" viewBox="0 0 24 24"><path d="M12 2.5v19M2.5 12h19M5.3 5.3l13.4 13.4M18.7 5.3 5.3 18.7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  </svg>
+
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
-  <div class="demo-strip">CONCEPTO DE PORTAFOLIO <span aria-hidden="true">✦</span> MARCA FICTICIA · SIN RESERVACIONES REALES</div>
-  <header class="site-header" id="inicio">
+
+  <p class="demo-strip">Demo de portafolio <span aria-hidden="true">·</span> Marca ficticia <span aria-hidden="true">·</span> Sin reservaciones reales</p>
+
+  <header class="site-header">
     <div class="wrap header-inner">
-      <a class="wordmark" href="#inicio" aria-label="Taller Norte, volver al inicio"><span class="wordmark-icon">✳</span><span>TALLER <em>NORTE</em><small>BARBERÍA DE AUTOR</small></span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-      <nav class="nav" id="nav-principal" aria-label="Navegación principal"><a href="#filosofia">Nosotros</a><a href="#servicios">Servicios</a><a href="#galeria">Estilo</a><a href="#visitanos">Visítanos</a><a class="nav-cta" href="#contacto">Agendar <span aria-hidden="true">↗</span></a></nav>
+      <a class="wordmark" href="#inicio" aria-label="Taller Norte, ir al inicio">
+        <svg class="wordmark-icon" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
+        <span>TALLER <em>NORTE</em><small>BARBERÍA DE AUTOR</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-principal">
+        <span class="sr-only">Menú</span>
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <a href="#filosofia">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Estilo</a>
+        <a href="#visitanos">Visítanos</a>
+        <a class="nav-cta" href="#contacto">Pedir cita <span aria-hidden="true">→</span></a>
+      </nav>
     </div>
   </header>
+
   <main id="contenido">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
-        <div class="hero-copy"><p class="eyebrow"><span class="eyebrow-line"></span> QUERÉTARO · EST. 2026 / CONCEPTO</p><h1 id="hero-title">EL CORTE<br>ES <i>ACTITUD.</i></h1><p class="hero-desc">Un espacio donde el detalle importa. Cortes precisos, rituales clásicos y un estilo que habla por ti.</p><div class="hero-actions"><a href="#servicios" class="btn btn-primary">Explora los servicios <span aria-hidden="true">↗</span></a><a href="#galeria" class="text-link">Descubre el estilo <span aria-hidden="true">↗</span></a></div><div class="hero-foot"><span><strong>01 / 03</strong> CONCEPTO Y OFICIO</span><span>DESLIZA PARA EXPLORAR ↓</span></div></div>
-        <div class="hero-art"><img src="assets/hero.svg" alt="Ilustración editorial original de herramientas de barbería y un sillón clásico" width="680" height="760"><div class="hero-stamp"><span>HECHO<br>CON<br>DETALLE</span><b>✳</b></div><div class="art-caption">ESTILO CLÁSICO / VISIÓN ACTUAL</div></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>Querétaro · Concepto 2026</p>
+          <h1 id="hero-title">El corte<br>es <i>actitud.</i></h1>
+          <p class="hero-desc">Un espacio donde el detalle importa. Cortes precisos, rituales clásicos y un estilo que habla por ti.</p>
+          <div class="hero-actions">
+            <a href="#servicios" class="btn btn-primary">Ver servicios <span aria-hidden="true">→</span></a>
+            <a href="#contacto" class="text-link">Simular una cita <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-foot">
+            <span>Concepto y oficio</span>
+            <a href="#filosofia">Explorar <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="assets/hero.svg" alt="Ilustración original de un sillón clásico de barbería frente a un espejo en arco" width="680" height="760" fetchpriority="high">
+          <p class="hero-stamp" aria-hidden="true"><span>Hecho<br>con<br>detalle</span></p>
+          <p class="art-caption">Ilustración original · No es una foto real</p>
+        </div>
       </div>
     </section>
-    <section class="ticker" aria-label="Nuestros valores"><div>PRECISIÓN <span>✳</span> CARÁCTER <span>✳</span> ESTILO <span>✳</span> PRECISIÓN <span>✳</span> CARÁCTER <span>✳</span> ESTILO <span>✳</span></div></section>
-    <section id="filosofia" class="section intro"><div class="wrap intro-grid"><div><p class="section-label">01 — EL CONCEPTO</p><h2>UN BUEN CORTE<br>SE <i>NOTA.</i></h2></div><div class="intro-text"><p>Creemos en la barbería sin prisas: escuchar, proponer y cuidar cada detalle. Una experiencia hecha para quienes valoran el oficio.</p><p class="muted">Este es un proyecto demostrativo. El nombre, la historia, los servicios y los precios son ficticios.</p><a class="underlined" href="#contacto">Conoce cómo solicitar una cita <span aria-hidden="true">↗</span></a></div></div></section>
-    <section id="servicios" class="section services"><div class="wrap"><div class="section-head"><div><p class="section-label">02 — EL OFICIO</p><h2>SERVICIOS <i>CON CARÁCTER.</i></h2></div><p>Un menú directo. Sin complicaciones.<br>Precios únicamente de ejemplo.</p></div><div class="service-list"><article class="service"><span class="service-number">01</span><div><h3>Corte clásico</h3><p>Asesoría breve, corte a detalle y peinado final.</p></div><strong>$250 <small>MXN*</small></strong><span class="service-arrow" aria-hidden="true">↗</span></article><article class="service"><span class="service-number">02</span><div><h3>Arreglo de barba</h3><p>Perfilado, contornos y acabado con productos de cuidado.</p></div><strong>$180 <small>MXN*</small></strong><span class="service-arrow" aria-hidden="true">↗</span></article><article class="service"><span class="service-number">03</span><div><h3>Corte + barba</h3><p>La experiencia completa en una sola visita.</p></div><strong>$380 <small>MXN*</small></strong><span class="service-arrow" aria-hidden="true">↗</span></article><article class="service"><span class="service-number">04</span><div><h3>Corte de precisión</h3><p>Trabajo de acabado fino y atención a los detalles.</p></div><strong>$300 <small>MXN*</small></strong><span class="service-arrow" aria-hidden="true">↗</span></article></div><p class="micro">* Precios y descripciones inventados para esta demostración; no constituyen una oferta real.</p></div></section>
-    <section id="galeria" class="section gallery"><div class="wrap"><div class="section-head"><div><p class="section-label">03 — INSPIRACIÓN</p><h2>ESTILO QUE <i>PERDURA.</i></h2></div><p>Visuales originales creados para este portafolio.<br>No representan trabajos realizados.</p></div><div class="gallery-grid"><figure class="gallery-big"><img loading="lazy" src="assets/style-1.svg" width="700" height="650" alt="Ilustración conceptual original de un peinado masculino clásico"><figcaption>01 / TRAZOS LIMPIOS</figcaption></figure><figure><img loading="lazy" src="assets/style-2.svg" width="500" height="650" alt="Ilustración original de tijeras y peine de barbería"><figcaption>02 / HERRAMIENTAS DEL OFICIO</figcaption></figure><figure><img loading="lazy" src="assets/style-3.svg" width="500" height="650" alt="Ilustración original de espejo y estación de barbería"><figcaption>03 / RITUAL DIARIO</figcaption></figure></div></div></section>
-    <section id="visitanos" class="section visit"><div class="wrap visit-grid"><div><p class="section-label">04 — VISÍTANOS</p><h2>UN ESPACIO<br>PARA <i>VOLVER.</i></h2><p>Un concepto pensado para Querétaro. No tenemos un establecimiento físico: esta ubicación es únicamente referencial.</p><div class="visit-info"><div><span>UBICACIÓN REFERENCIAL</span><strong>Centro Histórico, Santiago de Querétaro, Qro.</strong></div><div><span>HORARIO FICTICIO</span><strong>Lun–Sáb · 10:00 a 19:00</strong></div></div><a class="underlined" href="https://www.google.com/maps/search/?api=1&query=Centro+Historico+Queretaro" target="_blank" rel="noopener noreferrer">Ver zona en Google Maps <span aria-hidden="true">↗</span></a></div><div class="map-panel" aria-label="Ilustración de ubicación referencial"><div class="map-grid"></div><span class="map-pin">✳</span><span class="map-label">QUERÉTARO<br><small>UBICACIÓN DE EJEMPLO</small></span><span class="map-corner">20.59° N / 100.39° O</span></div></div></section>
-    <section id="contacto" class="contact"><div class="wrap contact-inner"><p class="section-label">05 — CONTACTO</p><h2>¿LISTO PARA<br>UN <i>NUEVO LOOK?</i></h2><p>En una web real, este botón llevaría al WhatsApp oficial del negocio. Aquí solo muestra una simulación segura.</p><button id="demo-whatsapp" class="btn btn-contact" type="button">Simular contacto por WhatsApp <span aria-hidden="true">↗</span></button><p class="micro">Demo: no se envían mensajes ni se solicita información personal.</p><p id="demo-feedback" class="demo-feedback" role="status" aria-live="polite" hidden></p></div></section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Precisión</span><svg><use href="#i-mark"/></svg><span>Carácter</span><svg><use href="#i-mark"/></svg><span>Estilo</span><svg><use href="#i-mark"/></svg><span>Oficio</span><svg><use href="#i-mark"/></svg>
+        <span>Precisión</span><svg><use href="#i-mark"/></svg><span>Carácter</span><svg><use href="#i-mark"/></svg><span>Estilo</span><svg><use href="#i-mark"/></svg><span>Oficio</span><svg><use href="#i-mark"/></svg>
+      </div>
+    </div>
+
+    <section id="filosofia" class="section intro" aria-labelledby="filosofia-title">
+      <div class="wrap intro-grid">
+        <div>
+          <p class="section-label">01 — El concepto</p>
+          <h2 id="filosofia-title">Un buen corte<br>se <i>nota.</i></h2>
+        </div>
+        <div class="intro-text">
+          <p class="lead">Creemos en la barbería sin prisas: escuchar, proponer y cuidar cada detalle. Una experiencia hecha para quienes valoran el oficio.</p>
+          <p class="note">Este es un proyecto demostrativo. El nombre, la historia, los servicios y los precios son ficticios.</p>
+          <a class="underlined" href="#contacto">Cómo se solicitaría una cita <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section services" aria-labelledby="servicios-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-label">02 — El oficio</p>
+            <h2 id="servicios-title">Servicios <i>con carácter.</i></h2>
+          </div>
+          <p>Un menú directo, sin complicaciones.<br>Precios únicamente de ejemplo.</p>
+        </div>
+        <ul class="service-list">
+          <li class="service">
+            <span class="service-number" aria-hidden="true">01</span>
+            <div class="service-body"><h3>Corte clásico</h3><p>Asesoría breve, corte a detalle y peinado final.</p></div>
+            <p class="service-price">$250 <small>MXN*</small></p>
+            <a class="service-pick" href="#contacto" data-service="Corte clásico">Elegir<span class="sr-only">: Corte clásico</span> <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="service">
+            <span class="service-number" aria-hidden="true">02</span>
+            <div class="service-body"><h3>Arreglo de barba</h3><p>Perfilado, contornos y acabado con productos de cuidado.</p></div>
+            <p class="service-price">$180 <small>MXN*</small></p>
+            <a class="service-pick" href="#contacto" data-service="Arreglo de barba">Elegir<span class="sr-only">: Arreglo de barba</span> <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="service">
+            <span class="service-number" aria-hidden="true">03</span>
+            <div class="service-body"><h3>Corte + barba</h3><p>La experiencia completa en una sola visita.</p></div>
+            <p class="service-price">$380 <small>MXN*</small></p>
+            <a class="service-pick" href="#contacto" data-service="Corte + barba">Elegir<span class="sr-only">: Corte + barba</span> <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="service">
+            <span class="service-number" aria-hidden="true">04</span>
+            <div class="service-body"><h3>Corte de precisión</h3><p>Trabajo de acabado fino y atención a los detalles.</p></div>
+            <p class="service-price">$300 <small>MXN*</small></p>
+            <a class="service-pick" href="#contacto" data-service="Corte de precisión">Elegir<span class="sr-only">: Corte de precisión</span> <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+        <p class="micro">* Precios y descripciones inventados para esta demostración; no constituyen una oferta real.</p>
+      </div>
+    </section>
+
+    <section id="galeria" class="section gallery" aria-labelledby="galeria-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-label">03 — Inspiración</p>
+            <h2 id="galeria-title">Estilo que <i>perdura.</i></h2>
+          </div>
+          <p>Ilustraciones originales creadas para este portafolio.<br>No representan trabajos realizados.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-big">
+            <img loading="lazy" decoding="async" src="assets/style-1.svg" width="700" height="650" alt="Ilustración de una navaja clásica abierta junto a una brocha de afeitar">
+            <figcaption>01 / Navaja y brocha</figcaption>
+          </figure>
+          <figure>
+            <img loading="lazy" decoding="async" src="assets/style-2.svg" width="500" height="650" alt="Ilustración de unas tijeras de barbería sobre un peine">
+            <figcaption>02 / Tijera y peine</figcaption>
+          </figure>
+          <figure>
+            <img loading="lazy" decoding="async" src="assets/style-3.svg" width="500" height="650" alt="Ilustración de un poste de barbería con franjas diagonales">
+            <figcaption>03 / El poste</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="visitanos" class="section visit" aria-labelledby="visitanos-title">
+      <div class="wrap visit-grid">
+        <div>
+          <p class="section-label">04 — Visítanos</p>
+          <h2 id="visitanos-title">Un espacio<br>para <i>volver.</i></h2>
+          <p class="visit-desc">Un concepto pensado para Querétaro. No existe un establecimiento físico: esta ubicación es únicamente referencial.</p>
+          <dl class="visit-info">
+            <div><dt>Ubicación referencial</dt><dd>Centro Histórico, Santiago de Querétaro, Qro.</dd></div>
+            <div><dt>Horario ficticio</dt><dd>Lunes a sábado · 10:00 a 19:00</dd></div>
+          </dl>
+          <a class="underlined" href="https://www.google.com/maps/search/?api=1&amp;query=Centro+Hist%C3%B3rico+Quer%C3%A9taro" target="_blank" rel="noopener noreferrer">Ver la zona en Google Maps <span aria-hidden="true">↗</span><span class="sr-only"> (se abre en otra pestaña)</span></a>
+        </div>
+        <div class="map-panel" role="img" aria-label="Mapa ilustrado y esquemático de la zona referencial en Querétaro; no es un mapa real">
+          <div class="map-grid"></div>
+          <span class="map-pin"><svg><use href="#i-mark"/></svg></span>
+          <span class="map-label">Querétaro<small>Ubicación de ejemplo</small></span>
+          <span class="map-corner">Mapa ilustrativo</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact" aria-labelledby="contacto-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <p class="section-label">05 — Contacto</p>
+          <h2 id="contacto-title">¿Listo para<br>un <i>nuevo look?</i></h2>
+          <p>En un sitio real, este formulario abriría el WhatsApp oficial del negocio con el mensaje ya escrito. Aquí solo es una <strong>simulación</strong>: no se envía nada ni se pide ningún dato personal.</p>
+
+          <form class="sim-form" id="sim-form" novalidate>
+            <div class="field">
+              <label for="sim-servicio">Servicio</label>
+              <select id="sim-servicio" name="servicio">
+                <option>Corte clásico</option>
+                <option>Arreglo de barba</option>
+                <option>Corte + barba</option>
+                <option>Corte de precisión</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="sim-dia">Día preferido</label>
+              <select id="sim-dia" name="dia">
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miércoles">Miércoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="sábado" selected>Sábado</option>
+              </select>
+            </div>
+            <fieldset class="field field-turno">
+              <legend>Horario</legend>
+              <label class="chip"><input type="radio" name="turno" value="por la mañana"> Mañana <small>10–14 h</small></label>
+              <label class="chip"><input type="radio" name="turno" value="por la tarde" checked> Tarde <small>14–19 h</small></label>
+            </fieldset>
+            <button class="btn btn-contact" type="submit">Simular envío por WhatsApp <span aria-hidden="true">→</span></button>
+          </form>
+          <p class="sr-only" id="sim-live" role="status" aria-live="polite"></p>
+          <p class="micro">Demo: no se envían mensajes, no se guarda información y no hay reservaciones reales.</p>
+        </div>
+
+        <div class="phone" role="group" aria-labelledby="phone-title">
+          <div class="phone-head">
+            <span class="phone-avatar"><svg aria-hidden="true"><use href="#i-mark"/></svg></span>
+            <span><strong id="phone-title">Taller Norte</strong><small>Vista previa · cuenta ficticia</small></span>
+          </div>
+          <div class="phone-chat" id="sim-chat">
+            <p class="chat-notice">Así llegaría la solicitud por WhatsApp.</p>
+            <div class="bubble bubble-out" id="sim-sent" hidden>
+              <p id="sim-sent-text"></p>
+              <span class="bubble-meta"><span id="sim-sent-time"></span> · simulado</span>
+            </div>
+            <p class="chat-notice chat-notice-warn" id="sim-result" hidden></p>
+          </div>
+          <div class="phone-compose">
+            <p class="compose-label">Mensaje que se prepararía:</p>
+            <output class="compose-text" id="sim-preview" for="sim-servicio sim-dia">Hola, Taller Norte. Me gustaría agendar: Corte clásico. Día preferido: sábado, por la tarde. ¿Tienen espacio disponible?</output>
+          </div>
+          <details class="phone-link">
+            <summary>Ver el enlace técnico que se generaría</summary>
+            <code id="sim-link">https://wa.me/52XXXXXXXXXX?text=…</code>
+            <p>En la versión comercial, <code>52XXXXXXXXXX</code> se sustituye por el número autorizado del negocio. Esta demo no incluye ninguno.</p>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><div class="wrap footer-inner"><a class="wordmark" href="#inicio"><span class="wordmark-icon">✳</span><span>TALLER <em>NORTE</em><small>BARBERÍA DE AUTOR</small></span></a><span>DISEÑO DE PORTAFOLIO · NEGOCIO FICTICIO © <span id="year">2026</span></span><a href="#inicio">VOLVER ARRIBA ↑</a></div></footer>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="wordmark" href="#inicio" aria-label="Taller Norte, volver al inicio">
+        <svg class="wordmark-icon" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
+        <span>TALLER <em>NORTE</em><small>BARBERÍA DE AUTOR</small></span>
+      </a>
+      <p>Diseño de portafolio · Negocio ficticio · © <span id="year">2026</span></p>
+      <a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
 </body>
 </html>
